@@ -1,0 +1,32 @@
+
+
+
+2024-05-12
+==============
+1.×Ö·ûÇý¶¯Éè±¸1
+
+2024-05-13
+===========
+beep
+=====
+arm-linux-gnueabihf-gcc beepApp.c -o beepApp
+scp ./beep.ko root@192.168.10.101:/home/zaichen/06/
+scp ./beepApp root@192.168.10.101:/home/zaichen/06/
+
+insmod beep.ko
+./beepApp /dev/beep 1
+./beepApp /dev/beep 0
+
+rmmode beep.ko
+
+
+
+atomic
+========
+arm-linux-gnueabihf-gcc atomcApp.c -o atomcApp
+scp ./beep.ko root@192.168.10.101:/home/zaichen/07/
+scp ./beepApp root@192.168.10.101:/home/zaichen/07/
+insmod atomic.ko
+
+./atomicApp /dev/gpioled  0 
+./atomicApp /dev/gpioled  1 

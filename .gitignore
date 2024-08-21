@@ -50,3 +50,4 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+00_alientek_driver_demo/00_alientek_driver_demo.si4project/*
